@@ -1,0 +1,14 @@
+.film-wrapper {
+  margin: 10px;
+  text-align: center;
+  justify-content: space-between;
+  color: red;
+  .film-item {
+    width: 20%;
+  }
+}
+
+:host ::ng-deep h3 {
+  color: green;
+}
+

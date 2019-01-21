@@ -1,0 +1,24 @@
+<!-- <div style="display: flex">
+  <div class="film-wrapper" *ngFor="let item of filmList; index as i">
+    <div class="film-item">
+      <img [src]="item.photo" alt="">
+      <h3>{{item.name}}</h3>
+      <p>{{item.type}}</p>
+      <p>{{item.time}}</p>
+      <p>{{item.startDate}}</p>
+      <button (click)="remove(i)">Delete</button>
+    </div>
+  </div>
+</div> -->
+<div class="film-wrapper" style="display: flex">
+  <ng-template ngFor [ngForOf]="filmList" let-item let-i="index">
+    <div class="film-item">
+      <img [src]="item.photo" alt="">
+      <h3>{{item.name | titlecase}}</h3>
+      <p>{{item.type}}</p>
+      <p>{{item.time}}</p>
+      <p>{{item.startDate | cfDate}}</p>
+      <button (click)="remove(i)">Delete</button>
+    </div>
+  </ng-template>
+</div>

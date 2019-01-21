@@ -1,0 +1,16 @@
+<h3>User info</h3>
+<h4>Hello : {{userInfo.name}}</h4>
+<p>
+  <button (click)="toggle()">show/hide</button>
+</p>
+<p *ngIf="show; else noPhoto">
+  <img [src]="userInfo.photo" alt="sdfs">
+</p>
+<ng-template #noPhoto>
+  <p>No Image</p>
+</ng-template>
+<ul *ngFor="let item of products">
+  <li>
+    <p> {{item.name}} - {{item.price}}</p>
+  </li>
+</ul>
